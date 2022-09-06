@@ -5,6 +5,7 @@ from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 import newlinejson as nlj
 import json
+import xmltodict
 
 
 # Abstract class for uploading files to the ElasticSearch cluster
@@ -58,4 +59,21 @@ class jsonUploader(elasticUploader):
         with open(file, 'r') as f:
             for data in json.load(f):
                 yield data
+
+import pprint
+
+# Uploader for xml files
+class xmlUploader(elasticUploader):
+    def __init__(self, index, hostname):
+        super().__init__(index, hostname)
+
+    def generate_actions(self, file):
+        with open(file, 'r') as f:
+            xmlData = f.read()
+
+        myDict = xmltodict.parse(xmlData)
+        pprint.pprint(myDict[list(myDict.keys())[0]], indent=1)
+        #currently resulting in a dict of a dict of a list of dicts.
+
+
         
