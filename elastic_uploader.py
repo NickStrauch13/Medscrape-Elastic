@@ -70,7 +70,7 @@ class xmlUploader(elasticUploader):
         with open(file, 'r') as f:
             xmlData = f.read()
         rawDict = xmltodict.parse(xmlData)
-        publications = rawDict[list(rawDict.keys())[0]]
+        publications = rawDict[list(rawDict.keys())[0]] #specific to the pubmed xml files right now...
         for d in publications:
             yield d
 
