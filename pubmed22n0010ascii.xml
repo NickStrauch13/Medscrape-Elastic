@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE PubmedArticleSet SYSTEM "http://dtd.nlm.nih.gov/ncbi/pubmed/out/pubmed_190101.dtd">
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation Status="MEDLINE" Owner="NLM">
+      <PMID Version="1">274725</PMID>
+      <DateCompleted>
+        <Year>1978</Year>
+        <Month>07</Month>
+        <Day>15</Day>
+      </DateCompleted>
+      <DateRevised>
+        <Year>2019</Year>
+        <Month>05</Month>
+        <Day>01</Day>
+      </DateRevised>
+      <Article PubModel="Print">
+        <Journal>
+          <ISSN IssnType="Print">0027-8424</ISSN>
+          <JournalIssue CitedMedium="Print">
+            <Volume>75</Volume>
+            <Issue>3</Issue>
+            <PubDate>
+              <Year>1978</Year>
+              <Month>Mar</Month>
+            </PubDate>
+          </JournalIssue>
+          <Title>Proceedings of the National Academy of Sciences of the United States of America</Title>
+          <ISOAbbreviation>Proc Natl Acad Sci U S A</ISOAbbreviation>
+        </Journal>
+        <ArticleTitle>Thyroid hormones control lysosomal enzyme activities in liver and skeletal muscle.</ArticleTitle>
+        <Pagination>
+          <MedlinePgn>1369-73</MedlinePgn>
+        </Pagination>
+        <Abstract>
+          <AbstractText>Because protein degradation in liver and skeletal muscle is increased by thyroid hormones and decreased by thyroidectomy; we investigated the influence of thyroid hormones on the level of lysosomal enzymes. Hypophysectomized rats received daily injections of L-thyroxine or L-triiodothyronine. After 3 days of this regimen, homogenates of liver and skeletal muscle showed a 2- to 3-fold increase in the activities of cathepsin D, cathepsin B, and other lysosomal enzymes including leucine aminopeptidase, acid phosphatase, beta-galactosidase, N-acetylglucosaminidase, and alpha-mannosidase. In liver, this effect reflected increased enzyme activity in the two subcellular fractions that normally contain lysosomes. Titration of cathepsin D with pepstatin indicated that the increase in this activity resulted from an increase in the number of enzyme molecules. These effects occurred with both pharmacologic (thyrotoxic) and physiologic (growth-promoting) doses of thyroid hormones. Liver and skeletal muscle from thyroidectomized rats had approximately 50% of the normal levels of lysosomal enzyme activities. Under these various conditions, heart and kidney, tissues in which protein degradation does not appear to be influenced by thyroid hormones, showed no significant changes in lysosomal hydrolases. Thus, thyroid hormones regulate proteolytic and other lysosomal enzyme activities in those tissues in which these hormones influence protein degradation. Many characteristic features of hyperthyroidism and hypothyroidism may result from changes in levels of lysosomal enzymes.</AbstractText>
+        </Abstract>
+        <AuthorList CompleteYN="Y">
+          <Author ValidYN="Y">
+            <LastName>DeMartino</LastName>
+            <ForeName>G N</ForeName>
+            <Initials>GN</Initials>
+          </Author>
+          <Author ValidYN="Y">
+            <LastName>Goldberg</LastName>
+            <ForeName>A L</ForeName>
+            <Initials>AL</Initials>
+          </Author>
+        </AuthorList>
+        <Language>eng</Language>
+        <PublicationTypeList>
+          <PublicationType UI="D016428">Journal Article</PublicationType>
+          <PublicationType UI="D013487">Research Support, U.S. Gov't, P.H.S.</PublicationType>
+        </PublicationTypeList>
+      </Article>
+      <MedlineJournalInfo>
+        <Country>United States</Country>
+        <MedlineTA>Proc Natl Acad Sci U S A</MedlineTA>
+        <NlmUniqueID>7505876</NlmUniqueID>
+        <ISSNLinking>0027-8424</ISSNLinking>
+      </MedlineJournalInfo>
+      <ChemicalList>
+        <Chemical>
+          <RegistryNumber>0</RegistryNumber>
+          <NameOfSubstance UI="D011506">Proteins</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>0</RegistryNumber>
+          <NameOfSubstance UI="D013963">Thyroid Hormones</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.1.3.2</RegistryNumber>
+          <NameOfSubstance UI="D000135">Acid Phosphatase</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.2.1.-</RegistryNumber>
+          <NameOfSubstance UI="D004186">Disaccharidases</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.4.-</RegistryNumber>
+          <NameOfSubstance UI="D002403">Cathepsins</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.4.11.1</RegistryNumber>
+          <NameOfSubstance UI="D007931">Leucyl Aminopeptidase</NameOfSubstance>
+        </Chemical>
+      </ChemicalList>
+      <CitationSubset>IM</CitationSubset>
+      <MeshHeadingList>
+        <MeshHeading>
+          <DescriptorName UI="D000135" MajorTopicYN="N">Acid Phosphatase</DescriptorName>
+          <QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D000818" MajorTopicYN="N">Animals</DescriptorName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D002403" MajorTopicYN="N">Cathepsins</DescriptorName>
+          <QualifierName UI="Q000378" MajorTopicYN="Y">metabolism</QualifierName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D004186" MajorTopicYN="N">Disaccharidases</DescriptorName>
+          <QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D007668" MajorTopicYN="N">Kidney</DescriptorName>
+          <QualifierName UI="Q000201" MajorTopicYN="N">enzymology</QualifierName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D007931" MajorTopicYN="N">Leucyl Aminopeptidase</DescriptorName>
+          <QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D051381" MajorTopicYN="N">Rats</DescriptorName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D013963" MajorTopicYN="N">Thyroid Hormones</DescriptorName>
+          <QualifierName UI="Q000494" MajorTopicYN="Y">pharmacology</QualifierName>
+        </MeshHeading>
+      </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="pubmed">
+          <Year>1978</Year>
+          <Month>3</Month>
+          <Day>1</Day>
+        </PubMedPubDate>
+        <PubMedPubDate PubStatus="medline">
+          <Year>1978</Year>
+          <Month>3</Month>
+          <Day>1</Day>
+          <Hour>0</Hour>
+          <Minute>1</Minute>
+        </PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez">
+          <Year>1978</Year>
+          <Month>3</Month>
+          <Day>1</Day>
+          <Hour>0</Hour>
+          <Minute>0</Minute>
+        </PubMedPubDate>
+      </History>
+      <PublicationStatus>ppublish</PublicationStatus>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">274725</ArticleId>
+        <ArticleId IdType="pmc">PMC411473</ArticleId>
+        <ArticleId IdType="doi">10.1073/pnas.75.3.1369</ArticleId>
+      </ArticleIdList>
+      <ReferenceList>
+        <Reference>
+          <Citation>J Clin Invest. 1943 Sep;22(5):715-20</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">16695055</ArticleId>
+          </ArticleIdList>
+        </Reference>
+        <Reference>
+          <Citation>Biochem J. 1976 Jun 15;156(3):609-17</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">182157</ArticleId>
+          </ArticleIdList>
+        </Reference>
+        <Reference>
+          <Citation>Biochem Biophys Res Commun. 1972 May 26;47(4):965-70</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">4260317</ArticleId>
+          </ArticleIdList>
+        </Reference>
+        <Reference>
+          <Citation>J Biol Chem. 1974 Sep 10;249(17):5458-63</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">4547200</ArticleId>
+          </ArticleIdList>
+        </Reference>
+        <Reference>
+          <Citation>Am J Physiol. 1975 May;228(5):1341-5</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">165730</ArticleId>
+          </ArticleIdList>
+        </Reference>
+        <Reference>
+          <Citation>J Biol Chem. 1975 Nov 10;250(21):8487-95</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">172501</ArticleId>
+          </ArticleIdList>
+        </Reference>
+      </ReferenceList>
+    </PubmedData>
+  </PubmedArticle>
+  <PubmedArticle>
+    <MedlineCitation Status="MEDLINE" Owner="NLM">
+      <PMID Version="1">274725</PMID>
+      <DateCompleted>
+        <Year>1978</Year>
+        <Month>07</Month>
+        <Day>15</Day>
+      </DateCompleted>
+      <DateRevised>
+        <Year>2019</Year>
+        <Month>05</Month>
+        <Day>01</Day>
+      </DateRevised>
+      <Article PubModel="Print">
+        <Journal>
+          <ISSN IssnType="Print">0027-8424</ISSN>
+          <JournalIssue CitedMedium="Print">
+            <Volume>75</Volume>
+            <Issue>3</Issue>
+            <PubDate>
+              <Year>1978</Year>
+              <Month>Mar</Month>
+            </PubDate>
+          </JournalIssue>
+          <Title>COPYCOPYCOPY Proceedings of the National Academy of Sciences of the United States of America</Title>
+          <ISOAbbreviation>Proc Natl Acad Sci U S A</ISOAbbreviation>
+        </Journal>
+        <ArticleTitle>Thyroid hormones control lysosomal enzyme activities in liver and skeletal muscle.</ArticleTitle>
+        <Pagination>
+          <MedlinePgn>1369-73</MedlinePgn>
+        </Pagination>
+        <Abstract>
+          <AbstractText>Because protein degradation in liver and skeletal muscle is increased by thyroid hormones and decreased by thyroidectomy; we investigated the influence of thyroid hormones on the level of lysosomal enzymes. Hypophysectomized rats received daily injections of L-thyroxine or L-triiodothyronine. After 3 days of this regimen, homogenates of liver and skeletal muscle showed a 2- to 3-fold increase in the activities of cathepsin D, cathepsin B, and other lysosomal enzymes including leucine aminopeptidase, acid phosphatase, beta-galactosidase, N-acetylglucosaminidase, and alpha-mannosidase. In liver, this effect reflected increased enzyme activity in the two subcellular fractions that normally contain lysosomes. Titration of cathepsin D with pepstatin indicated that the increase in this activity resulted from an increase in the number of enzyme molecules. These effects occurred with both pharmacologic (thyrotoxic) and physiologic (growth-promoting) doses of thyroid hormones. Liver and skeletal muscle from thyroidectomized rats had approximately 50% of the normal levels of lysosomal enzyme activities. Under these various conditions, heart and kidney, tissues in which protein degradation does not appear to be influenced by thyroid hormones, showed no significant changes in lysosomal hydrolases. Thus, thyroid hormones regulate proteolytic and other lysosomal enzyme activities in those tissues in which these hormones influence protein degradation. Many characteristic features of hyperthyroidism and hypothyroidism may result from changes in levels of lysosomal enzymes.</AbstractText>
+        </Abstract>
+        <AuthorList CompleteYN="Y">
+          <Author ValidYN="Y">
+            <LastName>DeMartino</LastName>
+            <ForeName>G N</ForeName>
+            <Initials>GN</Initials>
+          </Author>
+          <Author ValidYN="Y">
+            <LastName>Goldberg</LastName>
+            <ForeName>A L</ForeName>
+            <Initials>AL</Initials>
+          </Author>
+        </AuthorList>
+        <Language>eng</Language>
+        <PublicationTypeList>
+          <PublicationType UI="D016428">Journal Article</PublicationType>
+          <PublicationType UI="D013487">Research Support, U.S. Gov't, P.H.S.</PublicationType>
+        </PublicationTypeList>
+      </Article>
+      <MedlineJournalInfo>
+        <Country>United States</Country>
+        <MedlineTA>Proc Natl Acad Sci U S A</MedlineTA>
+        <NlmUniqueID>7505876</NlmUniqueID>
+        <ISSNLinking>0027-8424</ISSNLinking>
+      </MedlineJournalInfo>
+      <ChemicalList>
+        <Chemical>
+          <RegistryNumber>0</RegistryNumber>
+          <NameOfSubstance UI="D011506">Proteins</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>0</RegistryNumber>
+          <NameOfSubstance UI="D013963">Thyroid Hormones</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.1.3.2</RegistryNumber>
+          <NameOfSubstance UI="D000135">Acid Phosphatase</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.2.1.-</RegistryNumber>
+          <NameOfSubstance UI="D004186">Disaccharidases</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.4.-</RegistryNumber>
+          <NameOfSubstance UI="D002403">Cathepsins</NameOfSubstance>
+        </Chemical>
+        <Chemical>
+          <RegistryNumber>EC 3.4.11.1</RegistryNumber>
+          <NameOfSubstance UI="D007931">Leucyl Aminopeptidase</NameOfSubstance>
+        </Chemical>
+      </ChemicalList>
+      <CitationSubset>IM</CitationSubset>
+      <MeshHeadingList>
+        <MeshHeading>
+          <DescriptorName UI="D000135" MajorTopicYN="N">Acid Phosphatase</DescriptorName>
+          <QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName>
+        </MeshHeading>
+        <MeshHeading>
+          <DescriptorName UI="D013963" MajorTopicYN="N">Thyroid Hormones</DescriptorName>
+          <QualifierName UI="Q000494" MajorTopicYN="Y">pharmacology</QualifierName>
+        </MeshHeading>
+      </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="pubmed">
+          <Year>1978</Year>
+          <Month>3</Month>
+          <Day>1</Day>
+        </PubMedPubDate>
+        <PubMedPubDate PubStatus="medline">
+          <Year>1978</Year>
+          <Month>3</Month>
+          <Day>1</Day>
+          <Hour>0</Hour>
+          <Minute>1</Minute>
+        </PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez">
+          <Year>1978</Year>
+          <Month>3</Month>
+          <Day>1</Day>
+          <Hour>0</Hour>
+          <Minute>0</Minute>
+        </PubMedPubDate>
+      </History>
+      <PublicationStatus>ppublish</PublicationStatus>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">274725</ArticleId>
+        <ArticleId IdType="pmc">PMC411473</ArticleId>
+        <ArticleId IdType="doi">10.1073/pnas.75.3.1369</ArticleId>
+      </ArticleIdList>
+      <ReferenceList>
+        <Reference>
+          <Citation>J Clin Invest. 1943 Sep;22(5):715-20</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">16695055</ArticleId>
+          </ArticleIdList>
+        </Reference>
+        <Reference>
+          <Citation>J Clin Invest. 1974 Feb;53(2):572-81</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="pubmed">11344572</ArticleId>
+          </ArticleIdList>
+        </Reference>
+      </ReferenceList>
+    </PubmedData>
+  </PubmedArticle>
+</PubmedArticleSet>

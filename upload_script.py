@@ -3,14 +3,12 @@ from elastic_uploader import jsonUploader
 from elastic_uploader import xmlUploader
 
 
+# Currently being used for testing/manual uploads
 
 HOSTNAME = "http://elasticsearch.medscrape.com:9200"
-INDEX = "a_kol"
-FILE = "C:/Users/nickj/OneDrive/Documents/Medscrape/Kascii.jsonl"
+INDEX = "test_full_abstracts"
+FILE = "C:/Users/nickj/OneDrive/Documents/Medscrape/ElasticUploader/pubmed22n0010ascii.xml"
 
 
 uploader = xmlUploader(INDEX, HOSTNAME)
-uploader.generate_actions("pubmed22n0010ascii.xml")
-#uploader.upload_to_elastic(FILE)
-
-
+uploader.upload_to_elastic(FILE)

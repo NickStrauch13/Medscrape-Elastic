@@ -60,9 +60,8 @@ class jsonUploader(elasticUploader):
             for data in json.load(f):
                 yield data
 
-import pprint
 
-# Uploader for xml files
+# Uploader for xml files. NOT READY FOR NON-PUBMED XML FILES YET. STILL TESTING
 class xmlUploader(elasticUploader):
     def __init__(self, index, hostname):
         super().__init__(index, hostname)
@@ -70,10 +69,10 @@ class xmlUploader(elasticUploader):
     def generate_actions(self, file):
         with open(file, 'r') as f:
             xmlData = f.read()
-
-        myDict = xmltodict.parse(xmlData)
-        pprint.pprint(myDict[list(myDict.keys())[0]], indent=1)
-        #currently resulting in a dict of a dict of a list of dicts.
+        rawDict = xmltodict.parse(xmlData)
+        publications = rawDict[list(rawDict.keys())[0]]
+        for d in publications:
+            yield d
 
 
         
