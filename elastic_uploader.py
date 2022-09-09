@@ -45,7 +45,7 @@ class elasticUploader(ABC):
     # actions: generator producted by generate_actions
     # index_name: string representing desired name of new index
     def create_index(self, actions, index_name):
-        pass
+        mapping = {}
 
     
 
@@ -71,7 +71,7 @@ class jsonUploader(elasticUploader):
                 yield data
 
 
-# Uploader for xml files. NOT READY FOR NON-PUBMED XML FILES YET. STILL TESTING
+# Uploader for xml files. POSSIBLY NOT READY FOR NON-PUBMED XML FILES YET. STILL TESTING
 class xmlUploader(elasticUploader):
     def __init__(self, index, hostname):
         super().__init__(index, hostname)
@@ -79,9 +79,10 @@ class xmlUploader(elasticUploader):
     def generate_actions(self, file):
         with open(file, 'r') as f:
             xmlData = f.read()
-        rawDict = xmltodict.parse(xmlData)
-        publications = rawDict[list(rawDict.keys())[0]] #specific to the pubmed xml files right now...
-        for d in publications:
+        rawDict = xmltodict.parse(xmlData) 
+        xmlDocumentSet = list(rawDict.values())[0]
+        documents = xmlDocumentSet[list(xmlDocumentSet.keys())[0]]
+        for d in documents:
             yield d
 
 
