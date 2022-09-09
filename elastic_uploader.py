@@ -42,10 +42,10 @@ class elasticUploader(ABC):
     # It is recommended to create the indicies directly in Elasticsearch for
     # greater fine-tuning; however, this method serves as a convenient alternative.
     #
-    # actions: generator producted by generate_actions
+    # file: path to data file
     # index_name: string representing desired name of new index
-    def create_index(self, actions, index_name):
-        mapping = {}
+    def create_index(self, file, index_name):
+        doc = next(self.generate_actions(file))
 
     
 

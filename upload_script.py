@@ -11,4 +11,6 @@ FILE = "C:/Users/nickj/OneDrive/Documents/Medscrape/ElasticUploader/pubmed22n001
 
 
 uploader = xmlUploader(INDEX, HOSTNAME)
-uploader.upload_to_elastic(FILE)
+for d in uploader.generate_actions(FILE):
+    print(d)
+#uploader.upload_to_elastic(FILE)
