@@ -10,7 +10,7 @@ INDEX = "test_full_abstracts"
 FILE = "C:/Users/nickj/OneDrive/Documents/Medscrape/ElasticUploader/pubmed22n0010ascii.xml"
 
 
-uploader = xmlUploader(INDEX, HOSTNAME)
+uploader = xmlUploader(HOSTNAME)
 for d in uploader.generate_actions(FILE):
     print(d)
-#uploader.upload_to_elastic(FILE)
+#uploader.upload_to_elastic(INDEX, FILE)

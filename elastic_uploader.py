@@ -10,11 +10,9 @@ import xmltodict
 
 # Abstract class for uploading files to the ElasticSearch cluster
 #
-# index: Name of the index the data will be ingested into.
 # hostname: Public IP of the ElasticSearch cluster with proper port. (i.e. http://elasticsearch.medscrape.com:9200)
 class elasticUploader(ABC):
-    def __init__(self, index, hostname):
-        self.index = index
+    def __init__(self, hostname):
         try:
             self.client = Elasticsearch(hostname)
         except ValueError:
@@ -30,11 +28,12 @@ class elasticUploader(ABC):
 
     # Uploads processed data to the ElasticSearch cluster
     #
+    # index: Name of the index the data will be ingested into.
     # file: path to data file
-    def upload_to_elastic(self, file):
-        if not self.client.indices.exists(index=self.index):
+    def upload_to_elastic(self, index, file):
+        if not self.client.indices.exists(index=index):
             raise ValueError("Invalid index. Verify the provided index already exists in the ElasticSearch cluster.")
-        bulk(client=self.client, index=self.index,
+        bulk(client=self.client, index=index,
              actions=self.generate_actions(file))
 
 
@@ -51,8 +50,8 @@ class elasticUploader(ABC):
 
 # Uploader for new line delimited json files
 class ndjsonUploader(elasticUploader):
-    def __init__(self, index, hostname):
-        super().__init__(index, hostname)
+    def __init__(self, hostname):
+        super().__init__(hostname)
 
     def generate_actions(self, file):
         with nlj.open(file) as src:
@@ -62,8 +61,8 @@ class ndjsonUploader(elasticUploader):
 
 # Uploader for json files
 class jsonUploader(elasticUploader):
-    def __init__(self, index, hostname):
-        super().__init__(index, hostname)
+    def __init__(self, hostname):
+        super().__init__(hostname)
 
     def generate_actions(self, file):
         with open(file, 'r') as f:
@@ -73,8 +72,8 @@ class jsonUploader(elasticUploader):
 
 # Uploader for xml files. POSSIBLY NOT READY FOR NON-PUBMED XML FILES YET. STILL TESTING
 class xmlUploader(elasticUploader):
-    def __init__(self, index, hostname):
-        super().__init__(index, hostname)
+    def __init__(self, hostname):
+        super().__init__(hostname)
 
     def generate_actions(self, file):
         with open(file, 'r') as f:
