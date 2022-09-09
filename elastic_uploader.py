@@ -21,7 +21,7 @@ class elasticUploader(ABC):
             print("Invalid hostname. Check public IP and port.")
 
     # Must return a generator that produces dicts. Each dict will be uploaded to
-    # elastic as a single document in the index.
+    # Elastic as a single document in the index.
     #
     # file: path to data file
     @abstractmethod
@@ -36,6 +36,16 @@ class elasticUploader(ABC):
             raise ValueError("Invalid index. Verify the provided index already exists in the ElasticSearch cluster.")
         bulk(client=self.client, index=self.index,
              actions=self.generate_actions(file))
+
+
+    # Creates an Elasticsearch index based off input data structure.
+    # It is recommended to create the indicies directly in Elasticsearch for
+    # greater fine-tuning; however, this method serves as a convenient alternative.
+    #
+    # actions: generator producted by generate_actions
+    # index_name: string representing desired name of new index
+    def create_index(self, actions, index_name):
+        pass
 
     
 
