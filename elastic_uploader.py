@@ -8,7 +8,7 @@ import json
 import xmltodict
 
 
-# Abstract class for uploading files to the ElasticSearch cluster
+# Abstract class for uploading files or query results to the ElasticSearch cluster
 #
 # hostname: Public IP of the ElasticSearch cluster with proper port. (i.e. http://elasticsearch.medscrape.com:9200)
 class elasticUploader(ABC):
@@ -21,20 +21,20 @@ class elasticUploader(ABC):
     # Must return a generator that produces dicts. Each dict will be uploaded to
     # Elastic as a single document in the index.
     #
-    # file: path to data file
+    # data: path to data file, or iterable query result
     @abstractmethod
-    def generate_actions(self, file):
+    def generate_actions(self, data):
         pass
 
     # Uploads processed data to the ElasticSearch cluster
     #
     # index: Name of the index the data will be ingested into.
-    # file: path to data file
-    def upload_to_elastic(self, index, file):
+    # data: path to data file, or iterable query result
+    def upload_to_elastic(self, index, data):
         if not self.client.indices.exists(index=index):
             raise ValueError("Invalid index. Verify the provided index already exists in the ElasticSearch cluster.")
         bulk(client=self.client, index=index,
-             actions=self.generate_actions(file))
+             actions=self.generate_actions(data))
 
 
     # Creates an Elasticsearch index based off input data structure.
@@ -70,7 +70,7 @@ class jsonUploader(elasticUploader):
                 yield data
 
 
-# Uploader for xml files. POSSIBLY NOT READY FOR NON-PUBMED XML FILES YET. STILL TESTING
+# Uploader for xml files. 
 class xmlUploader(elasticUploader):
     def __init__(self, hostname):
         super().__init__(hostname)
@@ -83,6 +83,19 @@ class xmlUploader(elasticUploader):
         documents = xmlDocumentSet[list(xmlDocumentSet.keys())[0]]
         for d in documents:
             yield d
+
+
+# Uploader for an iterable of dictionaries (useful for uploading query results)
+#  (trying to think of a more representative name...)
+class queryUploader(elasticUploader):
+    def __init__(self, hostname):
+        super().__init__(hostname)
+    
+    def generate_actions(self, data):
+        for d in data:
+            yield d
+
+
 
 
         
