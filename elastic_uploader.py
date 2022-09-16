@@ -6,6 +6,7 @@ from elasticsearch.helpers import bulk
 import newlinejson as nlj
 import json
 import xmltodict
+import mysql.connector
 
 
 # Abstract class for uploading files or query results to the ElasticSearch cluster
@@ -33,8 +34,13 @@ class elasticUploader(ABC):
     def upload_to_elastic(self, index, data):
         if not self.client.indices.exists(index=index):
             raise ValueError("Invalid index. Verify the provided index already exists in the ElasticSearch cluster.")
-        bulk(client=self.client, index=index,
-             actions=self.generate_actions(data))
+        try:
+            bulk(client=self.client, index=index,
+                actions=self.generate_actions(data))
+            print("Upload Successful")
+        except:
+            print("Upload Failed")
+        
 
 
     # Creates an Elasticsearch index based off input data structure.
@@ -85,15 +91,23 @@ class xmlUploader(elasticUploader):
             yield d
 
 
-# Uploader for an iterable of dictionaries (useful for uploading query results)
-#  (trying to think of a more representative name...)
-class queryUploader(elasticUploader):
+# Uploader for SQL queries
+class sqlUploader(elasticUploader):
     def __init__(self, hostname):
         super().__init__(hostname)
     
-    def generate_actions(self, data):
-        for d in data:
-            yield d
+    # the typical 'data' parameter is represented by the sqlCursor that executed the query
+    def generate_actions(self, sqlCursor):
+        try:
+            col_names = sqlCursor.column_names
+        except:
+            raise ValueError("Bad SQL connector")
+    
+        while True:
+            curr_sample = sqlCursor.fetchone()
+            if not curr_sample:
+                break
+            yield dict(zip(col_names, curr_sample))
 
 
 
